@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片分辨率调整工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>图片分辨率调整工具</h1>
+        
+        <div class="upload-area" id="dropZone">
+            <input type="file" id="fileInput" accept="image/*" hidden>
+            <div class="upload-text">
+                点击或拖拽图片到此处
+            </div>
+        </div>
+
+        <div class="settings" id="settings" style="display: none;">
+            <div class="preview">
+                <img id="preview" alt="预览">
+            </div>
+            
+            <div class="controls">
+                <div class="input-group">
+                    <label for="width">宽度 (像素):</label>
+                    <input type="number" id="width" min="1">
+                </div>
+                
+                <div class="input-group">
+                    <label for="height">高度 (像素):</label>
+                    <input type="number" id="height" min="1">
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="maintainRatio" checked>
+                    <label for="maintainRatio">保持宽高比</label>
+                </div>
+
+                <button id="resize">调整大小</button>
+                <button id="download">下载图片</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
